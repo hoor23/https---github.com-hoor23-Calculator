@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="calculator_1701945.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+:root
+{
+    --main-background-color:hsl(222, 26%, 31%);
+    --main-text-color:hsl(0, 0%, 100%);
+    --input-text-color:hsl(0, 0%, 100%);
+    --toggle-bg:hsl(223, 31%, 20%);
+--slider-thumb:hsl(6, 63%, 50%);
+    --display-color:hsl(224, 36%, 15%);
+    --number-key-background:hsl(30, 25%, 89%);
+    --number-key-shadow:hsl(28, 16%, 65%);
+    --key-text-color:hsl(221, 14%, 31%);
+    --delete-key-bg:hsl(225, 21%, 49%);
+    --delete-key-shadow:hsl(224, 28%, 35%);
+    --equal-key-bg:hsl(6, 63%, 50%);
+    --equal-key-shadow:hsl(6, 70%, 34%);
+}
+        body {
+            background-color: var(--main-background-color);
+            color: var(--main-text-color);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding-top: 48px;
+
+        }
+
+        .cal-display {
+            display: flex;
+            padding-top: 38px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-input {
+            position: relative;
+            padding: 3.5rem 1rem;
+            border-radius: 0.8rem;
+            border: none;
+            user-select: none;
+            width: 64%;
+            cursor: default;
+            background-color: var(--display-color);
+            font-size: 23px;
+            color: var(--input-text-color);
+            text-align: end;
+        }
+
+        .display-input:focus {
+            outline: none;
+        }
+
+        .cal-buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            /* Remove default appearance */
+            appearance: none;
+            width: 100%;
+            height: 17px;
+            background: var(--toggle-bg);
+            outline: none;
+            border: none;
+            border-radius: 31px;
+            padding: 3px;
+        }
+
+        /* Style the slider thumb */
+        .slider::-webkit-slider-thumb {
+            /* -webkit-appearance: none; Remove default appearance */
+            appearance: none;
+            width: 12px;
+            /* Set the width of the thumb */
+            height: 12px;
+            /*Set the height of the thumb */
+            background: var(--slider-thumb);
+            /* Set the background color of the thumb */
+            border: none;
+            /* Remove the default border */
+            border-radius: 50%;
+            /* Make the thumb round */
+            cursor: pointer;
+            /* Add a pointer cursor */
+        }
+
+        .theme-container {
+            display: flex;
+            align-items: end;
+            justify-content: flex-end;
+
+        }
+
+        .text {
+            font-weight: 900;
+        }
+
+        .button {
+            padding: 19px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:var(--key-text-color);
+    background-color: var(--number-key-background);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 3px var(--number-key-shadow);
+    font-weight: 800;
+    width: 21%;
+        }
+
+        .del {
+            font-size: 17px;
+            padding: 17px 11px;
+            background-color: var(--delete-key-bg);
+            box-shadow: 0 3px var(--delete-key-shadow);
+            color: white;
+           
+
+        }
+
+        .cal-BtnPad {
+            background: var(--toggle-bg);
+            width: 64%;
+            margin: 26px auto;
+            border-radius: 6px;
+            padding: 21px;
+        }
+
+        .operators {
+            padding: 14px 25px;
+        }
+
+        .row {
+            display: flex;
+    gap: 22px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 0px 23px 0px;
+        }
+
+        .reset {
+            padding: 17px 30px;
+            background-color: var(--delete-key-bg);
+            box-shadow: 0 3px var(--delete-key-shadow);
+            color: white;
+            font-size: 17px;
+            width: 50%;
+        }
+
+        .equal {
+            padding: 14px 52px;
+            width: 50%;
+            background-color: var(--equal-key-bg);
+            box-shadow: 0 3px var(--equal-key-shadow);
+            color: white;
+        }
+        @media screen and (min-width: 1025px) {
+            .container {
+                width: 59%;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 630px) {
+            .display-input {
+                padding: 2.9rem 1rem;
+                width: 70%;
+            }
+        .cal-BtnPad
+        {
+            width: 70%;
+        }
+           
+        }
+
+        @media screen and (max-width: 490px) {
+            .display-input {
+                width: 82%;
+                padding: 2.5rem 1rem;
+            }
+.cal-BtnPad
+{
+    width: 81%;
+}
+            
+        }
+        @media screen and (max-width: 380px){
+.row{
+    gap: 11px;
+    padding: 0px 0px 15px 0px;
+}
+.button{
+    padding: 17px 19px;
+    font-size: 16px;
+}
+.operators {
+    padding: 15px 20px;
+}
+.reset {
+    padding: 12px 24px;
+}
+.equal {
+    padding: 12px 40px;
+}
+.del
+{
+    font-size: 15px;
+    padding: 14px 8px;
+}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2 class="text">calc</h2>
+            <div class="theme-container">
+                <h6 class="text" style="padding-right: 14px;">THEME</h6>
+                <div style="max-width: 20%; display: flex; flex-direction: column;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h6 class="text">1</h6>
+                        <h6 class="text">2</h6>
+                        <h6 class="text">3</h6>
+                    </div>
+                    <input type="range" min="0" max="2" value="0" class="slider" id="theme-slider">
+                </div>
+
+
+
+            </div>
+        </header>
+
+        <main>
+            <div class="cal-display">
+                
+                <!-- <input type="text" name="cal-display" class="expr" id="exp"> -->
+                <input type="text" name="cal-display" placeholder="0" class="display-input" id="cal-display" readonly>
+            </div>
+            <div class="cal-BtnPad">
+                <div class="row">
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                    <button class="button del">DEL</button>
+                </div>
+                <div class="row">
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                    <button class="button">+</button>
+                </div>
+                <div class="row">
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                    <button class="button operators">-</button>
+                </div>
+                <div class="row">
+                    <button class="button operators">.</button>
+                    <button class="button">0</button>
+                    <button class="button operators">/</button>
+                    <button class="button">x</button>
+                </div>
+                <div class="row">
+                    <button class="button reset">RESET</button>
+                    <button class="button equal">=</button>
+                </div>
+            </div>
+    </div>
+
+    </main>
+
+    </div>
+</body>
+<!-- <script src="app.js"></script> -->
+<script src="script.js"></script>
+
+</html>
