@@ -30,7 +30,7 @@ The task was to build a calculator app that:
 Calculator: Desktop design 
 ![](./desktop.webp)
 
-Calculator: Desktop design 
+Calculator: mobile design 
 ![](./mobile.webp)
 
 ### Links
