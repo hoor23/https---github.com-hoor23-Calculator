@@ -35,8 +35,8 @@ Calculator: mobile design
 
 ### Links
 
-- Solution URL: [https://github.com/hoor23/https---github.com-hoor23-Calculator.git](https://github.com/hoor23/https---github.com-hoor23-Calculator.git)
-- Live Site URL: [https://hoor23.github.io/https---github.com-hoor23-Calculator/](https://hoor23.github.io/https---github.com-hoor23-Calculator/)
+- Solution URL: [https://github.com/HooriaSaeeda/Calculator.git](https://github.com/HooriaSaeeda/Calculator.git)
+- Live Site URL: [https://hooriasaeeda.github.io/Calculator/](https://hooriasaeeda.github.io/Calculator/)
 
 ## My process
 
@@ -61,8 +61,9 @@ Calculator: mobile design
 
 ## Author
 
-- Frontend Mentor - [hoor23](https://www.frontendmentor.io/profile/hoor23)
-
+- Github - [HooriaSaeeda](https://github.com/HooriaSaeeda)
+- Frontend Mentor - [HooriaSaeeda](https://www.frontendmentor.io/profile/HooriaSaeeda)
+- Linkedin - [Hoor Seyda](linkedin.com/in/hoor-seyda-901176222)
 
 ## Acknowledgments
 
